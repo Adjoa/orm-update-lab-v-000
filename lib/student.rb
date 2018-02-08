@@ -39,7 +39,7 @@ class Student
     SQL
 
     row = DB[:conn].execute(sql, self.name, self.grade)
-    self.id = row[0]
+    @id = row[0]
   end
 
 end
