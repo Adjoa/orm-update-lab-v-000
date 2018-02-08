@@ -38,8 +38,8 @@ class Student
       VALUES (?, ?)
     SQL
 
-    row = DB[:conn].execute(sql, self.name, self.grade)
-    @id = row.flatten[0]
+    DB[:conn].execute(sql, self.name, self.grade)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
   end
 
 end
