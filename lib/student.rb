@@ -7,8 +7,8 @@ class Student
   #  with DB[:conn]
 
   def initialize(id=nil, name, grade)
-    @id = # IDEA: 
-    @name = name 
+    @id = id 
+    @name = name
     @grade = grade
   end
 
